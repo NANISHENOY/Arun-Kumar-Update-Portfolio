@@ -1,0 +1,31 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-gradient-to-br from-indigo-900 via-slate-900 to-cyan-900 text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply relative inline-flex items-center gap-2 rounded-2xl px-6 py-3 
+           font-semibold text-white bg-gradient-to-r from-indigo-500 to-cyan-400 
+           shadow-lg transition-all duration-300;
+  }
+  .btn:hover {
+    @apply scale-105 shadow-xl;
+  }
+  .card {
+    @apply rounded-2xl border border-white/10 bg-white/10 backdrop-blur-lg 
+           shadow-md transition-transform duration-300;
+  }
+  .card:hover {
+    @apply scale-105 shadow-xl;
+  }
+}
